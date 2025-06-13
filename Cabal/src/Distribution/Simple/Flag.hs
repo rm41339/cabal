@@ -1,5 +1,6 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE PatternSynonyms #-}
+{-# LANGUAGE TypeSynonymInstances #-}
 
 -----------------------------------------------------------------------------
 

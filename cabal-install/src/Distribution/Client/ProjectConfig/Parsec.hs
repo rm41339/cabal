@@ -1,4 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE PatternSynonyms   #-}
 
 -- | Parsing project configuration.
 module Distribution.Client.ProjectConfig.Parsec
@@ -38,7 +39,8 @@ import Distribution.Parsec.Position (Position (..), zeroPos)
 import Distribution.Parsec.Warning (PWarnType (..))
 import Distribution.Simple.Program.Db (ProgramDb, defaultProgramDb, knownPrograms, lookupKnownProgram)
 import Distribution.Simple.Program.Types (programName)
-import Distribution.Simple.Setup (Flag (..), splitArgs)
+import Distribution.Simple.Setup (toFlag, flagToMaybe, maybeToFlag, splitArgs)
+import Distribution.Simple.Flag (Flag(..), pattern NoFlag)
 import Distribution.Simple.Utils (debug, noticeDoc, warn)
 import Distribution.Solver.Types.ProjectConfigPath
 import Distribution.System (buildOS)
