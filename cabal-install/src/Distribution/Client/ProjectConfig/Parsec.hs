@@ -12,6 +12,7 @@ module Distribution.Client.ProjectConfig.Parsec
     -- ** Parsing
   , ParseResult
   , runParseResult
+  , readPreprocessFields
   ) where
 
 import Distribution.CabalSpecVersion
