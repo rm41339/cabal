@@ -1,6 +1,4 @@
-# Cabal
-
-Cloned from https://github.com/jgotoh/cabal/tree/parse-cabal-project-parsec
+# Cabal (Cloned from https://github.com/jgotoh/cabal/tree/parse-cabal-project-parsec)
 
 [![Hackage version](https://img.shields.io/hackage/v/Cabal.svg?label=Hackage)](https://hackage.haskell.org/package/Cabal)
 [![Stackage version](https://www.stackage.org/package/Cabal/badge/lts?label=Stackage)](https://www.stackage.org/package/Cabal)
