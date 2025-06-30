@@ -62,6 +62,9 @@ instance Show a => Show (NubList a) where
 instance (Ord a, Read a) => Read (NubList a) where
   readPrec = readNubList toNubList
 
+instance (Ord a, NFData a) => NFData (NubList a) where
+  rnf (NubList xs) = rnf xs
+
 -- | Helper used by NubList/NubListR's Read instances.
 readNubList :: Read a => ([a] -> l a) -> R.ReadPrec (l a)
 readNubList listToL = R.parens . R.prec 10 $ fmap listToL R.readPrec

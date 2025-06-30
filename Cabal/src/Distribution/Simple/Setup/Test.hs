@@ -62,6 +62,9 @@ data TestShowDetails = Never | Failures | Always | Streaming | Direct
 instance Binary TestShowDetails
 instance Structured TestShowDetails
 
+instance NFData TestShowDetails where
+  rnf = genericRnf
+
 knownTestShowDetails :: [TestShowDetails]
 knownTestShowDetails = [minBound .. maxBound]
 

@@ -53,6 +53,9 @@ data ClientInstallFlags = ClientInstallFlags
   }
   deriving (Eq, Show, Generic)
 
+instance NFData ClientInstallFlags where
+  rnf = genericRnf
+
 instance Monoid ClientInstallFlags where
   mempty = gmempty
   mappend = (<>)

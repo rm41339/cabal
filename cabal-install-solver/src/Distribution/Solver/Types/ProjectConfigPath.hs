@@ -113,6 +113,9 @@ instance Ord ProjectConfigPath where
 instance Binary ProjectConfigPath
 instance Structured ProjectConfigPath
 
+instance NFData ProjectConfigPath where
+    rnf = genericRnf
+
 -- | Renders the path like this;
 --
 -- >D.config

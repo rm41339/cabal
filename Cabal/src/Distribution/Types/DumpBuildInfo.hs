@@ -15,6 +15,9 @@ data DumpBuildInfo
 instance Binary DumpBuildInfo
 instance Structured DumpBuildInfo
 
+instance NFData DumpBuildInfo where
+  rnf = genericRnf
+
 instance Parsec DumpBuildInfo where
   parsec = parsecDumpBuildInfo
 
